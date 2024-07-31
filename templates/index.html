@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../static/style/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="centered">
+            <div class="logo-holder">
+                <img class="logo" src="https://cdn.discordapp.com/avatars/336035290126876673/29ee3e082452133aa093346bd00a055b.webp?size=128&format=webp&width=0&height=20">
+            </div>
+
+            <h1 class="title">cat</h1>
+            <h2 style="margin-bottom: 48px;" class="subtitle">a <strong>coolish</strong> file host</h2>
+            <p style="font-size: 1rem;" class="subtitle" id="tip">. . .</p>
+            
+            <form class="upload-form" id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+                <div class="upload" id="drop-area">
+                    <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18px" height="18px">
+                        <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM16 11h-3v6h-2v-6H8l4-4 4 4z"/>
+                    </svg>
+                    <label for="file-upload" class="upload-label">click here to input a file</label>
+                    <input type="file" id="file-upload" name="file" class="file-input">
+                </div>
+                <input type="submit" id="submit-button" value="Upload" class="submit-button" style="display: none;">
+            </form>
+            
+            <hr id="upload-separator" style="height: .25em; padding: 0; margin: 1.5rem 0; background-color: #30363d82; border: 0; width: 500px; border-radius: 8px; display: none;">
+
+            <div class="uploads" id="uploads" style="display: none;">
+
+                <!-- this is a template -->
+                <div class="upload-field" style="display: none;">
+                    <i class="icon icon-doc-i">
+                        <svg width="12px" height="12px" viewBox="0 0 24 24" fill="#1f89e5" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 9V1L5 1C3.89543 1 3 1.89543 3 3V21C3 22.1046 3.89543 23 5 23H19C20.1046 23 21 22.1046 21 21V11H13C11.8954 11 11 10.1046 11 9Z" fill="#fffff"/>
+                            <path d="M13 1V9H21L13 1Z" fill="#fffff"/>
+                        </svg>
+                    </i>
+                    <p class="upload-name" id="upload-name">file name.ttf</p>
+                    <a class="upload-link" id="upload-link">https://link.com</a>
+
+                    <p class="upload-copy">
+                        <a class="upload-cb">
+                            <i class="icon icon-doc-i" style="vertical-align: sub;">
+                                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5.00005C7.01165 5.00082 6.49359 5.01338 6.09202 5.21799C5.71569 5.40973 5.40973 5.71569 5.21799 6.09202C5 6.51984 5 7.07989 5 8.2V17.8C5 18.9201 5 19.4802 5.21799 19.908C5.40973 20.2843 5.71569 20.5903 6.09202 20.782C6.51984 21 7.07989 21 8.2 21H15.8C16.9201 21 17.4802 21 17.908 20.782C18.2843 20.5903 18.5903 20.2843 18.782 19.908C19 19.4802 19 18.9201 19 17.8V8.2C19 7.07989 19 6.51984 18.782 6.09202C18.5903 5.71569 18.2843 5.40973 17.908 5.21799C17.5064 5.01338 16.9884 5.00082 16 5.00005M8 5.00005V7H16V5.00005M8 5.00005V4.70711C8 4.25435 8.17986 3.82014 8.5 3.5C8.82014 3.17986 9.25435 3 9.70711 3H14.2929C14.7456 3 15.1799 3.17986 15.5 3.5C15.8201 3.82014 16 4.25435 16 4.70711V5.00005M15 12H12M15 16H12M9 12H9.01M9 16H9.01" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </i>
+                            <span>copy link to clipboard</span>
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <img class="image" title="~" src="../static/gifs/shikanoko-nokonoko-koshitantan.gif">
+    <div id="toastBox"></div>
+    <script src="../static/script/script.js"></script>
+</body>
+</html>
